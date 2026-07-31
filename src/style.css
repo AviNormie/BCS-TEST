@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary: #7557e8;
+  --primary-soft: #eeeaff;
+  --surface: #fffdf8;
+  --ink: color-mix(in srgb, var(--primary) 9%, #111111);
+  --muted: color-mix(in srgb, var(--primary) 13%, #7d7a83);
+  --line: color-mix(in srgb, var(--primary) 13%, #e5e1e8);
+  --page: color-mix(in srgb, var(--primary-soft) 43%, var(--surface));
+  font-family: Inter, "SF Pro Display", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--primary-soft);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.dark {
+  --primary: #9c86ff;
+  --primary-soft: #28233f;
+  --surface: #17151f;
+  --ink: color-mix(in srgb, var(--primary) 8%, #ffffff);
+  --muted: color-mix(in srgb, var(--primary) 20%, #a7a4ad);
+  --line: color-mix(in srgb, var(--primary) 18%, #2d2936);
+  --page: color-mix(in srgb, var(--primary-soft) 42%, var(--surface));
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  background: var(--primary-soft);
+}
+
+button {
+  font: inherit;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--primary) 6%, transparent);
+}
+
+.icon-button {
+  display: inline-flex;
+  height: 38px;
+  width: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  transition: 180ms ease;
+}
+
+.icon-button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
