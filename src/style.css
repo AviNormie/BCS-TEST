@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -10,7 +11,11 @@
   --muted: color-mix(in srgb, var(--primary) 13%, #7d7a83);
   --line: color-mix(in srgb, var(--primary) 13%, #e5e1e8);
   --page: color-mix(in srgb, var(--primary-soft) 43%, var(--surface));
-  font-family: Inter, "SF Pro Display", "Segoe UI", sans-serif;
+  --profit: #4cae67;
+  --profit-soft: #eaf8ed;
+  --loss: #ef6b72;
+  --loss-soft: #fff0f1;
+  font-family: "Nunito", sans-serif;
   color: var(--ink);
   background: var(--primary-soft);
   font-synthesis: none;
@@ -25,6 +30,8 @@
   --muted: color-mix(in srgb, var(--primary) 20%, #a7a4ad);
   --line: color-mix(in srgb, var(--primary) 18%, #2d2936);
   --page: color-mix(in srgb, var(--primary-soft) 42%, var(--surface));
+  --profit-soft: color-mix(in srgb, var(--profit) 18%, var(--surface));
+  --loss-soft: color-mix(in srgb, var(--loss) 18%, var(--surface));
   color-scheme: dark;
 }
 
@@ -46,6 +53,12 @@ body {
 
 button {
   font: inherit;
+}
+
+.v-application,
+.v-btn,
+.v-chip {
+  font-family: "Nunito", sans-serif;
 }
 
 .panel {

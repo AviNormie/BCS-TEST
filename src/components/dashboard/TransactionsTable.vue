@@ -9,10 +9,16 @@ const transactions = [
 <template>
   <section class="panel min-h-[220px] overflow-hidden p-4">
     <div class="flex items-center justify-between">
-      <h3 class="text-xs font-bold">Recent transactions</h3>
+      <h3 class="text-sm font-extrabold">Recent transactions</h3>
       <div class="flex items-center gap-2">
-        <button class="rounded-full border border-[var(--line)] px-2.5 py-1.5 text-[9px]">All accounts⌄</button>
-        <button class="rounded-full border border-[var(--line)] px-2.5 py-1.5 text-[9px]">See all <v-icon size="12">mdi-chevron-right</v-icon></button>
+        <v-chip size="small" variant="outlined" class="!border-[var(--line)] !px-2 !text-[9px] !font-bold !text-[var(--ink)]">
+          All accounts
+          <v-icon end size="13">mdi-chevron-down</v-icon>
+        </v-chip>
+        <v-chip size="small" variant="outlined" class="!border-[var(--line)] !px-2 !text-[9px] !font-bold !text-[var(--ink)]">
+          See all
+          <v-icon end size="13">mdi-chevron-right</v-icon>
+        </v-chip>
       </div>
     </div>
     <div class="mt-3 overflow-x-auto">

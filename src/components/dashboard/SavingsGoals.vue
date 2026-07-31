@@ -9,7 +9,7 @@ const goals = [
 <template>
   <section class="panel min-h-[220px] p-4">
     <div class="flex items-start justify-between">
-      <h3 class="text-xs font-bold">Saving goals</h3>
+      <h3 class="text-sm font-extrabold">Saving goals</h3>
       <button class="icon-button !h-7 !w-7" aria-label="Open saving goals">
         <v-icon size="15">mdi-arrow-top-right</v-icon>
       </button>
@@ -20,10 +20,16 @@ const goals = [
           <span class="font-semibold">{{ goal.name }}</span>
           <span class="font-semibold text-[var(--primary)]">{{ goal.target }}</span>
         </div>
-        <div class="relative h-3 overflow-hidden rounded-full bg-[var(--primary-soft)]">
-          <span class="block h-full rounded-full bg-[var(--primary)]" :style="{ width: `${goal.progress}%` }" />
-          <span class="absolute inset-y-0 left-2 flex items-center text-[7px] font-bold text-white">{{ goal.progress }}%</span>
-        </div>
+        <v-progress-linear
+          :model-value="goal.progress"
+          height="16"
+          rounded="pill"
+          color="var(--primary)"
+          bg-color="var(--primary-soft)"
+          class="overflow-hidden !text-[8px] !font-extrabold text-white"
+        >
+          <span v-if="goal.progress >= 20">{{ goal.progress }}%</span>
+        </v-progress-linear>
       </div>
     </div>
   </section>

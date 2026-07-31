@@ -12,7 +12,7 @@ const categories = [
 <template>
   <section class="panel min-h-[245px] p-4">
     <div class="flex items-start justify-between">
-      <h3 class="text-xs font-bold">Budget</h3>
+      <h3 class="text-sm font-extrabold">Budget</h3>
       <button class="icon-button !h-7 !w-7" aria-label="Open budget">
         <v-icon size="15">mdi-arrow-top-right</v-icon>
       </button>

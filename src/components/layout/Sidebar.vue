@@ -38,11 +38,11 @@ const bottomMenu = [
             'flex w-full items-center gap-3 rounded-full px-3 py-2.5 text-left text-[13px] font-medium transition-all duration-200 lg:px-4',
             active === item.title
               ? 'bg-[var(--primary)] text-white shadow-[0_9px_22px_color-mix(in_srgb,var(--primary)_28%,transparent)]'
-              : 'text-[var(--ink)] hover:bg-[var(--primary-soft)]'
+              : 'text-[#111111] dark:text-white hover:bg-[var(--primary-soft)]'
           ]"
         >
-          <v-icon size="18" :color="active === item.title ? 'white' : 'var(--ink)'">{{ item.icon }}</v-icon>
-          <span>{{ item.title }}</span>
+          <v-icon size="18" :color="active === item.title ? 'white' : theme.dark ? 'white' : '#111111'">{{ item.icon }}</v-icon>
+          <span :style="{ color: active === item.title ? 'white' : theme.dark ? 'white' : '#111111' }">{{ item.title }}</span>
         </button>
       </nav>
 
@@ -51,10 +51,10 @@ const bottomMenu = [
         <button
           v-for="item in bottomMenu"
           :key="item.title"
-          class="flex w-full items-center gap-3 rounded-full px-3 py-2.5 text-[13px] font-medium text-[var(--ink)] transition hover:bg-[var(--primary-soft)] lg:px-4"
+          class="flex w-full items-center gap-3 rounded-full px-3 py-2.5 text-[13px] font-medium text-[#111111] transition hover:bg-[var(--primary-soft)] dark:text-white lg:px-4"
         >
-          <v-icon size="18" color="var(--ink)">{{ item.icon }}</v-icon>
-          <span>{{ item.title }}</span>
+          <v-icon size="18" :color="theme.dark ? 'white' : '#111111'">{{ item.icon }}</v-icon>
+          <span :style="{ color: theme.dark ? 'white' : '#111111' }">{{ item.title }}</span>
         </button>
       </div>
 
