@@ -2,7 +2,7 @@
   <header>
     <div class="flex flex-wrap items-center justify-between gap-4">
       <div>
-        <h2 class="text-2xl font-extrabold tracking-tight sm:text-[28px]">Welcome back, Adaline!</h2>
+        <h2 class="text-2xl font-extrabold tracking-tight sm:text-[28px]">Welcome back, Aasha!</h2>
         <p class="mt-0.5 text-xs text-[var(--muted)]">It is the best time to manage your finances</p>
       </div>
       <div class="flex items-center gap-2">
@@ -16,8 +16,8 @@
         <v-btn rounded="pill" variant="outlined" class="!h-10 !border-[var(--line)] !bg-[var(--surface)] !p-1 !pr-3 !text-[var(--ink)]">
           <span class="grid h-8 w-8 place-items-center rounded-full bg-[var(--primary-soft)] text-sm font-bold text-[var(--primary)]">A</span>
           <span class="hidden text-left sm:block">
-            <span class="block text-[11px] font-bold leading-tight">Adaline Lively</span>
-            <span class="block text-[8px] text-[var(--muted)]">adaline@email.com</span>
+            <span class="block text-[11px] font-bold leading-tight">Aasha</span>
+            <span class="block text-[8px] text-[var(--muted)]">aasha@email.com</span>
           </span>
           <v-icon size="14">mdi-chevron-down</v-icon>
         </v-btn>

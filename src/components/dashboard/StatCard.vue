@@ -22,7 +22,7 @@ withDefaults(
     <div class="mt-3 flex items-center gap-2 text-[10px]">
       <v-chip
         size="x-small"
-        class="!h-6 !font-extrabold"
+        class="!h-6 !font-extrabold px-1"
         :style="{
           backgroundColor: positive ? 'var(--profit-soft)' : 'var(--loss-soft)',
           color: positive ? 'var(--profit)' : 'var(--loss)',
